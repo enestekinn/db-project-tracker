@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3559E52C3DB68400933FEA /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3559E42C3DB68400933FEA /* ProjectUpdateView.swift */; };
 		4A6CF8712C3AD4F700944CAE /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CF8702C3AD4F700944CAE /* DBProjectTracker.swift */; };
 		4A6CF8732C3AD4F700944CAE /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CF8722C3AD4F700944CAE /* ProjectListView.swift */; };
 		4A6CF8752C3AD4F800944CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CF8742C3AD4F800944CAE /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A3559E42C3DB68400933FEA /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 		4A6CF86D2C3AD4F700944CAE /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6CF8702C3AD4F700944CAE /* DBProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProjectTracker.swift; sourceTree = "<group>"; };
 		4A6CF8722C3AD4F700944CAE /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				4AA389EA2C3C90D600FACA79 /* ProjectDetailView.swift */,
+				4A3559E42C3DB68400933FEA /* ProjectUpdateView.swift */,
 			);
 			path = "Project Detail";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				4A6CF8732C3AD4F700944CAE /* ProjectListView.swift in Sources */,
 				4A6CF8712C3AD4F700944CAE /* DBProjectTracker.swift in Sources */,
 				4AA389C92C3C657F00FACA79 /* StatBubbleView.swift in Sources */,
+				4A3559E52C3DB68400933FEA /* ProjectUpdateView.swift in Sources */,
 				4AA389CB2C3C676600FACA79 /* ProjectCardView.swift in Sources */,
 				4A6CF8802C3AD5D000944CAE /* Project.swift in Sources */,
 			);

@@ -14,6 +14,7 @@ struct DBProjectTracker: App {
         WindowGroup {
             ProjectListView()
                 .modelContainer(for: [Project.self,ProjectUpdate.self])
+              
         }
     }
 }

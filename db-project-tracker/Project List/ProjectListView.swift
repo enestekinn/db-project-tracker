@@ -13,11 +13,14 @@ struct ProjectListView: View {
     @State private var newProject: Project?
     
     @Query private var projects:[Project]
+    @State private var taoCount: Int  = 0
     
     var body: some View {
         
+     
         NavigationStack {
             ZStack {
+              
                 LinearGradient(colors: [Color("Deep Purple"),Color("Blush Pink")], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
@@ -37,7 +40,7 @@ struct ProjectListView: View {
                                     
                                 }
                                 .buttonStyle(.plain)
-                            
+                             
                                 
                             }
                             
