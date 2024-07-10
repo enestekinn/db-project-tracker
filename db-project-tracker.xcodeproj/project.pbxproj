@@ -19,7 +19,7 @@
 		4AA389C62C3C51DC00FACA79 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389C52C3C51DC00FACA79 /* FontHelper.swift */; };
 		4AA389C92C3C657F00FACA79 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389C82C3C657F00FACA79 /* StatBubbleView.swift */; };
 		4AA389CB2C3C676600FACA79 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */; };
-		4AA389E72C3C783A00FACA79 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389E62C3C783A00FACA79 /* AddProjectView.swift */; };
+		4AA389E72C3C783A00FACA79 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389E62C3C783A00FACA79 /* EditProjectView.swift */; };
 		4AA389EB2C3C90D600FACA79 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389EA2C3C90D600FACA79 /* ProjectDetailView.swift */; };
 		4AC8D76F2C3E502300E3D406 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D76E2C3E502300E3D406 /* AddUpdateView.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		4AA389C52C3C51DC00FACA79 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		4AA389C82C3C657F00FACA79 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
-		4AA389E62C3C783A00FACA79 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
+		4AA389E62C3C783A00FACA79 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		4AA389EA2C3C90D600FACA79 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		4AC8D76E2C3E502300E3D406 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +116,7 @@
 				4A6CF8722C3AD4F700944CAE /* ProjectListView.swift */,
 				4AA389C82C3C657F00FACA79 /* StatBubbleView.swift */,
 				4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */,
-				4AA389E62C3C783A00FACA79 /* AddProjectView.swift */,
+				4AA389E62C3C783A00FACA79 /* EditProjectView.swift */,
 			);
 			path = "Project List";
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 				4AA389C62C3C51DC00FACA79 /* FontHelper.swift in Sources */,
 				4A4933982C3EF6B400D3274E /* EditFocusView.swift in Sources */,
 				4AA389EB2C3C90D600FACA79 /* ProjectDetailView.swift in Sources */,
-				4AA389E72C3C783A00FACA79 /* AddProjectView.swift in Sources */,
+				4AA389E72C3C783A00FACA79 /* EditProjectView.swift in Sources */,
 				4A6CF8732C3AD4F700944CAE /* ProjectListView.swift in Sources */,
 				4A6CF8712C3AD4F700944CAE /* DBProjectTracker.swift in Sources */,
 				4AA389C92C3C657F00FACA79 /* StatBubbleView.swift in Sources */,
