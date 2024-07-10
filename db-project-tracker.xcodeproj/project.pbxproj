@@ -21,7 +21,7 @@
 		4AA389CB2C3C676600FACA79 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */; };
 		4AA389E72C3C783A00FACA79 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389E62C3C783A00FACA79 /* EditProjectView.swift */; };
 		4AA389EB2C3C90D600FACA79 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389EA2C3C90D600FACA79 /* ProjectDetailView.swift */; };
-		4AC8D76F2C3E502300E3D406 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D76E2C3E502300E3D406 /* AddUpdateView.swift */; };
+		4AC8D76F2C3E502300E3D406 /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D76E2C3E502300E3D406 /* EditUpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		4AA389E62C3C783A00FACA79 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		4AA389EA2C3C90D600FACA79 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
-		4AC8D76E2C3E502300E3D406 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
+		4AC8D76E2C3E502300E3D406 /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 			children = (
 				4AA389EA2C3C90D600FACA79 /* ProjectDetailView.swift */,
 				4A3559E42C3DB68400933FEA /* ProjectUpdateView.swift */,
-				4AC8D76E2C3E502300E3D406 /* AddUpdateView.swift */,
+				4AC8D76E2C3E502300E3D406 /* EditUpdateView.swift */,
 				4A4933972C3EF6B400D3274E /* EditFocusView.swift */,
 			);
 			path = "Project Detail";
@@ -214,7 +214,7 @@
 				4AA389CB2C3C676600FACA79 /* ProjectCardView.swift in Sources */,
 				4A4933962C3EF0FA00D3274E /* DateHelper.swift in Sources */,
 				4A6CF8802C3AD5D000944CAE /* Project.swift in Sources */,
-				4AC8D76F2C3E502300E3D406 /* AddUpdateView.swift in Sources */,
+				4AC8D76F2C3E502300E3D406 /* EditUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@ struct EditFocusView: View {
     @Environment(\.modelContext) private var context
     
     var project: Project
+    
     @State var focus:String = ""
     
     
