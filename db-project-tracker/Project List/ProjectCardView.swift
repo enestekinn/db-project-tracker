@@ -31,13 +31,15 @@ struct ProjectCardView: View {
                     StatBubbleView(title: "Wins", stat: "9", startColor: Color("Maroon"), endColor:Color("Olive"))
                     Spacer()
                 }
-                Text("My currect focus is...")
-                    .font(.featuredText)
-                    .foregroundStyle(Color.gray)
-                Text("Design the new website")
-                    .font(.featuredText)
-                    .foregroundStyle(Color.gray)
-                    .bold()
+                if project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    Text("My currect focus is...")
+                        .font(.featuredText)
+                        .foregroundStyle(Color.gray)
+                    Text(project.focus)
+                        .font(.featuredText)
+                        .foregroundStyle(Color.gray)
+                        .bold()
+                }
                   
             }
             .padding()
@@ -45,6 +47,3 @@ struct ProjectCardView: View {
     }
 }
 
-#Preview {
-    ProjectCardView(project: Project())
-}
