@@ -10,7 +10,7 @@ import SwiftUI
 struct StatBubbleView: View {
     
     var title: String
-    var stat: String
+    var stat: Double
     var startColor: Color
     var endColor: Color
     
@@ -25,8 +25,9 @@ struct StatBubbleView: View {
                 Text(title)
                     .font(Font.captionText)
                     .bold()
-                Text(stat)
+                Text(TextHelper.convertStat(input: stat))
                     .font(.featuredNumber)
+                    .bold()
             }
             .foregroundStyle(.white)
         }
@@ -34,6 +35,3 @@ struct StatBubbleView: View {
     }
 }
 
-#Preview {
-    StatBubbleView(title: "Hours", stat: "290", startColor: Color("Navy"), endColor: Color("Blue"))
-}

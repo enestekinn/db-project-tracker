@@ -10,12 +10,14 @@
 		4A3559E52C3DB68400933FEA /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3559E42C3DB68400933FEA /* ProjectUpdateView.swift */; };
 		4A4933962C3EF0FA00D3274E /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4933952C3EF0FA00D3274E /* DateHelper.swift */; };
 		4A4933982C3EF6B400D3274E /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4933972C3EF6B400D3274E /* EditFocusView.swift */; };
+		4A49339A2C3F29D300D3274E /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4933992C3F29D300D3274E /* StatHelper.swift */; };
 		4A6CF8712C3AD4F700944CAE /* DBProjectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CF8702C3AD4F700944CAE /* DBProjectTracker.swift */; };
 		4A6CF8732C3AD4F700944CAE /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CF8722C3AD4F700944CAE /* ProjectListView.swift */; };
 		4A6CF8752C3AD4F800944CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CF8742C3AD4F800944CAE /* Assets.xcassets */; };
 		4A6CF8782C3AD4F800944CAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CF8772C3AD4F800944CAE /* Preview Assets.xcassets */; };
 		4A6CF8802C3AD5D000944CAE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CF87F2C3AD5D000944CAE /* Project.swift */; };
 		4A6CF8822C3AD64700944CAE /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CF8812C3AD64700944CAE /* ProjectUpdate.swift */; };
+		4A9DB8172C4247640077E447 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9DB8162C4247640077E447 /* TextHelper.swift */; };
 		4AA389C62C3C51DC00FACA79 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389C52C3C51DC00FACA79 /* FontHelper.swift */; };
 		4AA389C92C3C657F00FACA79 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389C82C3C657F00FACA79 /* StatBubbleView.swift */; };
 		4AA389CB2C3C676600FACA79 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */; };
@@ -28,6 +30,7 @@
 		4A3559E42C3DB68400933FEA /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 		4A4933952C3EF0FA00D3274E /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		4A4933972C3EF6B400D3274E /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
+		4A4933992C3F29D300D3274E /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 		4A6CF86D2C3AD4F700944CAE /* db-project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "db-project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6CF8702C3AD4F700944CAE /* DBProjectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProjectTracker.swift; sourceTree = "<group>"; };
 		4A6CF8722C3AD4F700944CAE /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		4A6CF8772C3AD4F800944CAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A6CF87F2C3AD5D000944CAE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4A6CF8812C3AD64700944CAE /* ProjectUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdate.swift; sourceTree = "<group>"; };
+		4A9DB8162C4247640077E447 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		4AA389C52C3C51DC00FACA79 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		4AA389C82C3C657F00FACA79 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		4AA389CA2C3C676600FACA79 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			children = (
 				4AA389C52C3C51DC00FACA79 /* FontHelper.swift */,
 				4A4933952C3EF0FA00D3274E /* DateHelper.swift */,
+				4A4933992C3F29D300D3274E /* StatHelper.swift */,
+				4A9DB8162C4247640077E447 /* TextHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -209,10 +215,12 @@
 				4AA389E72C3C783A00FACA79 /* EditProjectView.swift in Sources */,
 				4A6CF8732C3AD4F700944CAE /* ProjectListView.swift in Sources */,
 				4A6CF8712C3AD4F700944CAE /* DBProjectTracker.swift in Sources */,
+				4A9DB8172C4247640077E447 /* TextHelper.swift in Sources */,
 				4AA389C92C3C657F00FACA79 /* StatBubbleView.swift in Sources */,
 				4A3559E52C3DB68400933FEA /* ProjectUpdateView.swift in Sources */,
 				4AA389CB2C3C676600FACA79 /* ProjectCardView.swift in Sources */,
 				4A4933962C3EF0FA00D3274E /* DateHelper.swift in Sources */,
+				4A49339A2C3F29D300D3274E /* StatHelper.swift in Sources */,
 				4A6CF8802C3AD5D000944CAE /* Project.swift in Sources */,
 				4AC8D76F2C3E502300E3D406 /* EditUpdateView.swift in Sources */,
 			);

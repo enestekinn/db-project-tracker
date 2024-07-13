@@ -32,6 +32,9 @@ struct EditProjectView: View {
                 HStack {
                     TextField("Project name",text: $projectName)
                         .textFieldStyle(.roundedBorder)
+                        .onChange(of: projectName){ oldValue , newValue in
+                            TextHelper.limitChars(input: projectName, limit: 30)
+                        }
                     
                     Button(isEditMode ? "Save" : "Add"){
                         

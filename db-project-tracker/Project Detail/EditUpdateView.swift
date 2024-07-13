@@ -43,22 +43,44 @@ struct EditUpdateView: View {
                     TextField("Hours",text: $hours)
                         .keyboardType(.numberPad)
                         .frame(width: 60)
+                        .onChange(of: hours){oldValue, newValue in
+                            let num  = Int(TextHelper.limitChars(input: hours, limit: 2)) ?? 0
+                            hours = num > 24 ? "24" : String(num)
+                            
+                        }
                         
                     Button(isEditMode ? "Save" : "Add"){
                         
+                        // keep track of the difference in hours for an edit update
+                        let hoursDifference = update.hours - Double(hours)!
                         
                         update.headline = headline
                         update.summary = summary
                         update.hours = Double(hours)!
                         
                         if !isEditMode {
+                            // Add PRoject Update
                             project.updates.insert(update, at: 0)
+                            
+                            
+                                // Force a SwiftData save
+                            try? context.save()
+                            
+                            // Update stats
+                            StatHelper.updateAdded(project: project, update: update)
+                        }
+                        else {
+                            // Edit Project Update
+                            //Update Stats
+                            StatHelper.updateEdited(project: project, hoursDifference: hoursDifference)
+                            
                         }
                     
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.blue)
+                    .disabled(shouldDisable())
                     
                     if isEditMode {
                         Button("Delete"){
@@ -87,6 +109,13 @@ struct EditUpdateView: View {
                     u.id == update.id
                     
                 }
+                //Force a SwiftData save
+                try? context.save()
+                
+                // Delete updates
+                StatHelper.updateDeleted(project: project, update: update)
+                
+                
                 dismiss()
             }
         }
@@ -96,6 +125,13 @@ struct EditUpdateView: View {
             hours = String(Int(update.hours))
         }
 
+    }
+    private func shouldDisable() -> Bool {
+        // If headline or summary or hours is empty, then disable saving it
+        return headline.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ||
+        summary.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ||
+        hours.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        
     }
 }
 

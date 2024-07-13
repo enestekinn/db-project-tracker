@@ -25,10 +25,10 @@ struct ProjectCardView: View {
                     .foregroundStyle(.white)
                 HStack(alignment: .center,spacing: 13) {
                     Spacer()
-                    StatBubbleView(title: project.name, stat: "290", startColor: Color("Navy"), endColor:Color("Sky Blue"))
-                    StatBubbleView(title: "Session", stat: "34", startColor: Color("Turtle Green"), endColor:Color("Lime"))
-                    StatBubbleView(title: "Updates", stat: "32", startColor: Color("Maroon"), endColor:Color("Fuschia"))
-                    StatBubbleView(title: "Wins", stat: "9", startColor: Color("Maroon"), endColor:Color("Olive"))
+                    StatBubbleView(title: project.name, stat: project.hours, startColor: Color("Navy"), endColor:Color("Sky Blue"))
+                    StatBubbleView(title: "Session", stat: Double(project.sessions), startColor: Color("Turtle Green"), endColor:Color("Lime"))
+                    StatBubbleView(title: "Updates", stat: Double(project.updates.count), startColor: Color("Maroon"), endColor:Color("Fuschia"))
+                    StatBubbleView(title: "Wins", stat: Double(project.wins), startColor: Color("Maroon"), endColor:Color("Olive"))
                     Spacer()
                 }
                 if project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {

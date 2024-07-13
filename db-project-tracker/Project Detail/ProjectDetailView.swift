@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProjectDetailView: View {
     
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     
     var project: Project
@@ -39,10 +41,10 @@ struct ProjectDetailView: View {
                     
                     HStack(alignment: .center,spacing: 13) {
                         Spacer()
-                        StatBubbleView(title: project.name, stat: "290", startColor: Color("Navy"), endColor:Color("Sky Blue"))
-                        StatBubbleView(title: "Session", stat: "34", startColor: Color("Turtle Green"), endColor:Color("Lime"))
-                        StatBubbleView(title: "Updates", stat: "32", startColor: Color("Maroon"), endColor:Color("Fuschia"))
-                        StatBubbleView(title: "Wins", stat: "9", startColor: Color("Maroon"), endColor:Color("Olive"))
+                        StatBubbleView(title: project.name, stat:  project.hours, startColor: Color("Navy"), endColor:Color("Sky Blue"))
+                        StatBubbleView(title: "Session", stat: Double(project.sessions), startColor: Color("Turtle Green"), endColor:Color("Lime"))
+                        StatBubbleView(title: "Updates", stat: Double(project.updates.count), startColor: Color("Maroon"), endColor:Color("Fuschia"))
+                        StatBubbleView(title: "Wins", stat: Double(project.wins), startColor: Color("Maroon"), endColor:Color("Olive"))
                         Spacer()
                     }
                     Text("My currenct focus is...")
@@ -77,27 +79,42 @@ struct ProjectDetailView: View {
                         .ignoresSafeArea()
                     
                 }
-                
-                //Project Updates
-                ScrollView(showsIndicators: false){
-                    
-                    VStack(spacing: 27){
-                        ForEach(project.updates.sorted(by: {u1, u2 in
-                            u1.date > u2.date
-                        })){ update in
-                            
-                            ProjectUpdateView(update: update)
-                                .onTapGesture {
-                                    
-                                }
-                                .onLongPressGesture {
-                                    newUpdate = update
-                                }
+                if project.updates.count > 0 {
+                    //Project Updates
+                    ScrollView(showsIndicators: false){
+                        
+                        VStack(spacing: 27){
+                            ForEach(project.updates.sorted(by: {u1, u2 in
+                                u1.date > u2.date
+                            })){ update in
+                                
+                                ProjectUpdateView(update: update)
+                                    .onTapGesture {
+                                        
+                                    }
+                                    .onLongPressGesture {
+                                        newUpdate = update
+                                    }
+                            }
                         }
+                        .padding()
+                        .padding(.bottom,80)
                     }
-                    .padding()
-                    .padding(.bottom,80)
-                }
+                }else {
+                    //No projects updates
+                        Spacer()
+                        HStack {
+                            Button("Tap to add a new project"){
+                                newUpdate  = ProjectUpdate()
+                            }
+                            .buttonStyle(.bordered)
+                            .foregroundStyle(.white)
+                            .padding(.bottom,100)
+                        }
+                       
+                        Spacer()
+                          
+                    }
             }
                 VStack{
                     Spacer()
@@ -160,6 +177,12 @@ struct ProjectDetailView: View {
         update.summary = project.focus
         
         project.updates.insert(update, at: 0)
+        
+        // Force a SwiftData save
+    try? context.save()
+        
+        // update stats
+        StatHelper.updateAdded(project: project, update: update)
         
         // Clear the project focus
         project.focus = ""
