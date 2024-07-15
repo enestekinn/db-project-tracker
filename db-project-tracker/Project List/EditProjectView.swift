@@ -43,9 +43,13 @@ struct EditProjectView: View {
                             
                             project.name = projectName
                         }else {
-                            // Add project to SwiftData
-                            project.name = projectName
-                            context.insert(project)
+                            withAnimation{
+                                // Add project to SwiftData
+                                project.name = projectName
+                                context.insert(project)
+                                
+                                try? context.save()
+                            }
                         }
                         
                         dismiss()
@@ -72,9 +76,11 @@ struct EditProjectView: View {
         }
         .confirmationDialog("Really delete?", isPresented: $showConfirmation,titleVisibility: .visible){
             Button("Yes, delete it"){
-                //Delete project from Swiftdata
-                context.delete(project)
-               dismiss()
+                withAnimation{
+                    //Delete project from Swiftdata
+                    context.delete(project)
+                    dismiss()
+                }
             }
         }
         .onAppear {

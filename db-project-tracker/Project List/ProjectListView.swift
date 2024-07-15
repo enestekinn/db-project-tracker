@@ -39,19 +39,15 @@ struct ProjectListView: View {
                                 ForEach(projects){ project in
                                    
                                     ProjectCardView(project: project)
+                                        .transition(.scale)
                                         .onTapGesture {
                                             selectedProject = project
                                         }
                                         .onLongPressGesture(perform: {
                                             newProject  = project
                                         })
-                                     
-                        
-                                 
                                     
                                 }
-                                
-                                
                             }
                             
                         }

@@ -18,7 +18,10 @@ struct ProjectDetailView: View {
     
     
     @State private var newUpdate: ProjectUpdate?
+
     @State private var showEditFocus = false
+    
+    @State private var animationOffSet  = 200
     
     var body: some View {
         
@@ -84,11 +87,15 @@ struct ProjectDetailView: View {
                     ScrollView(showsIndicators: false){
                         
                         VStack(spacing: 27){
-                            ForEach(project.updates.sorted(by: {u1, u2 in
+                            
+                            let sortedArray = project.updates.sorted(by: {u1, u2 in
                                 u1.date > u2.date
-                            })){ update in
+                            })
+                            ForEach(Array(sortedArray.enumerated()),id: \.element){ index, update in
                                 
                                 ProjectUpdateView(update: update)
+                                    .animation(.easeOut.delay(TimeInterval(0.05) * Double(index)), value: animationOffSet)
+                                    .offset(y: CGFloat(animationOffSet))
                                     .onTapGesture {
                                         
                                     }
@@ -165,6 +172,12 @@ struct ProjectDetailView: View {
             EditFocusView(project: project)
                 .presentationDetents([.fraction(0.2)])
         })
+        .onAppear {
+            
+            withAnimation{
+                animationOffSet = 0
+            }
+        }
     
 }
 
